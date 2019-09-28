@@ -20,6 +20,7 @@ authors:
 
 
 TODO: File write functions need to be implemented
+
 '''
 class AbstractCrawler:
 
@@ -86,6 +87,7 @@ class AbstractCrawler:
 
     Returns:
         session: The newly created session object
+
     '''
     def get_new_session(self):
         self.renew_connection()
@@ -101,6 +103,7 @@ class AbstractCrawler:
 
     '''
     Renew connection
+
     '''
     def renew_connection(self):
         with Controller.from_port(port=9051) as controller:
@@ -113,6 +116,7 @@ class AbstractCrawler:
 
     Returns:
         user_agent: a random user_agent string from the user_agents list
+        
     '''
     def get_random_user_agent(self):
         return random.choice(self.user_agents)
