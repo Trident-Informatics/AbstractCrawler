@@ -20,6 +20,7 @@ authors:
 
 
 TODO: File write functions need to be implemented
+TODO: Add multithreading functionality and change the url_list to a queue if needed
 
 '''
 class AbstractCrawler:
@@ -116,7 +117,7 @@ class AbstractCrawler:
 
     Returns:
         user_agent: a random user_agent string from the user_agents list
-        
+
     '''
     def get_random_user_agent(self):
         return random.choice(self.user_agents)
